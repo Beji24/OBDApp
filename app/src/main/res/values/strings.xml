@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">OBDApp</string>
+    <string name="Speed">-- \n mph</string>
+    <string name="Rpm">---- \n rpm</string>
+    <string name="Gear">---</string>
+    <string name="Mpg">-- mpg</string>
+    <string name="Temp">--°C</string>
+    <string name="status">Status</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="advice">Advice \n</string>
+
+</resources>

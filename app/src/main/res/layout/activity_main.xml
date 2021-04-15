@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:fitsSystemWindows="true"
+    >
+    <Button
+        android:id="@+id/Menu"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:icon="@drawable/ic_baseline_menu_24"
+        app:iconTint="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/RPM"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/temp"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:background="#808080"
+        android:text="@string/Temp"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/MPH"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/MPG"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:background="#808080"
+        android:text="@string/Mpg"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/MPH" />
+
+    <TextView
+        android:id="@+id/gear"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:background="#808080"
+        android:text="@string/Gear"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/temp"
+        app:layout_constraintEnd_toStartOf="@+id/MPH"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/RPM"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:background="#808080"
+        android:text="@string/Rpm"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/MPG"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/MPH" />
+
+    <TextView
+        android:id="@+id/MPH"
+        android:layout_width="120dp"
+        android:layout_height="140dp"
+        android:background="#808080"
+        android:text="@string/Speed"
+        android:textSize="45sp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="236dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/status"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/advice_title"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/rounded_top"
+        android:text="@string/advice"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/status" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/advice_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="401dp"
+        tools:layout_editor_absoluteY="181dp"
+        app:layout_constraintEnd_toEndOf="@+id/advice_title"
+        app:layout_constraintTop_toTopOf="@+id/advice_title"
+        app:layout_constraintBottom_toBottomOf="@+id/advice_title"/>
+
+    <TextView
+        android:id="@+id/advice"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/rounded_bottom"
+        android:gravity="bottom"
+        android:scrollbars="vertical"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/Menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/advice_title"
+        tools:ignore="RtlCompat" />
+
+    <TextView
+        android:id="@+id/maf_view"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/rounded_corner"
+        android:text="Mass Air Flow"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/advice_title" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/maf_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="401dp"
+        tools:layout_editor_absoluteY="181dp"
+        app:layout_constraintEnd_toEndOf="@+id/maf_view"
+        app:layout_constraintTop_toTopOf="@+id/maf_view"/>
+
+    <TextView
+        android:id="@+id/oil_temp_view"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/rounded_corner"
+        android:text="Oil Temperature"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/maf_view" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/oil_temp_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="401dp"
+        tools:layout_editor_absoluteY="181dp"
+        app:layout_constraintEnd_toEndOf="@+id/oil_temp_view"
+        app:layout_constraintTop_toTopOf="@+id/oil_temp_view"/>
+
+    <TextView
+        android:id="@+id/throttle_view"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/rounded_corner"
+        android:text="Throttle Position"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/oil_temp_view" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/throttle_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="401dp"
+        tools:layout_editor_absoluteY="181dp"
+        app:layout_constraintEnd_toEndOf="@+id/throttle_view"
+        app:layout_constraintTop_toTopOf="@+id/throttle_view"/>
+
+    <TextView
+        android:id="@+id/air_fuel_view"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/rounded_corner"
+        android:text="Air/Fuel Ratio"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/throttle_view" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/air_fuel_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="401dp"
+        tools:layout_editor_absoluteY="181dp"
+        app:layout_constraintEnd_toEndOf="@+id/air_fuel_view"
+        app:layout_constraintTop_toTopOf="@+id/air_fuel_view"/>
+
+    <TextView
+        android:id="@+id/barometric_view"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/rounded_corner"
+        android:text="Barometric Pressure"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/air_fuel_view" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/barometric_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="401dp"
+        tools:layout_editor_absoluteY="181dp"
+        app:layout_constraintEnd_toEndOf="@+id/barometric_view"
+        app:layout_constraintTop_toTopOf="@+id/barometric_view"/>
+
+    <TextView
+        android:id="@+id/intake_view"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/rounded_corner"
+        android:text="Intake Pressure"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barometric_view" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/intake_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="401dp"
+        tools:layout_editor_absoluteY="181dp"
+        app:layout_constraintEnd_toEndOf="@+id/intake_view"
+        app:layout_constraintTop_toTopOf="@+id/intake_view"/>
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginEnd="140dp"
+        android:fitsSystemWindows="true"
+        app:layout_constraintBottom_toTopOf="@+id/MPH"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".MainActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <FrameLayout
+                android:id="@+id/fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </FrameLayout>
+        </LinearLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            android:layout_marginEnd="-65dp"
+            android:layout_marginRight="-65dp"
+
+            app:menu="@menu/drawer_menu" />
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
